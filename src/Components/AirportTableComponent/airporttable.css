@@ -1,0 +1,25 @@
+
+.airport-table-container {
+    padding: 16px;
+    margin: auto;
+  }
+  
+  .airport-table-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .airport-table-container .react-spectrum-TableView {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .airport-table-container a {
+    text-decoration: none;
+    color: #0073e6;
+  }
+  
+  .airport-table-container a:hover {
+    text-decoration: underline;
+  }
+  

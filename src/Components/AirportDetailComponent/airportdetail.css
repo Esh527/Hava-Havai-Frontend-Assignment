@@ -1,0 +1,43 @@
+/* AirportDetail.css */
+.airport-detail-container {
+  padding: 16px;
+  margin: auto;
+  max-width: 800px;
+}
+
+.airport-detail-container a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+.airport-detail-container a:hover {
+  text-decoration: underline;
+}
+
+.airport-detail-container h2, .airport-detail-container h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.airport-detail-container .react-spectrum-TextField {
+  margin-bottom: 16px;
+}
+
+.airport-detail-container .react-spectrum-Flex {
+  margin-top: 20px;
+}
+
+.airport-detail-container .react-spectrum-Button {
+  margin-top: 20px;
+}
+
+.airport-detail-container .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Provider, View } from '@adobe/react-spectrum';
+import { defaultTheme } from '@adobe/react-spectrum';
+import Header from './Components/HeaderComponent/Header';
+import SideBar from './Components/SideBarComponent/SideBar';
+import AirportTable from './Components/AirportTableComponent/AirportTable';
+import AirportDetail from './Components/AirportDetailComponent/AirportDetail';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider theme={defaultTheme}>
+      <Router>
+        <Header />
+        <div className="app-container">
+          <SideBar />
+          
+            <Routes>
+              <Route path="/" element={<AirportTable />} />
+              <Route path="/airports" element={<AirportTable />} />
+              <Route path="/airport/:id" element={<AirportDetail />} />
+            </Routes>
+          
+        </div>
+      </Router>
+    </Provider>
   );
-}
+};
 
 export default App;
